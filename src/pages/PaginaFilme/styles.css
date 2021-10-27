@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#capa-filme{
+    position: absolute;
+    border-radius: 5%;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transform: translatex(75%) translateY(40%);
+    border: 2.5px solid #440753
+}
+.infoFilme{
+    position: absolute;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Roboto';
+}
+#tituloFilme{
+    transform: translateX(95%) translateY(400%);
+    font-size: 30px;
+}
+#rating{
+    transform: translateX(95%) translateY(700%);
+    font-size: 20px;
+}
+#sinopseTitulo{
+    transform: translateX(95%) translateY(800%);
+    font-size: 20px;
+}
+#sinopseInfo{
+    position: absolute;
+    font-size: 15px;
+    transform:translateX(100%) translateY(700%);
+}
+.botao1{
+    width: 12.5%;
+    height: 7.5%;
+    border-radius: 50px;
+    position: absolute;
+    background: linear-gradient(to top left, #900AB1, #4A14E4);
+    margin-top: 470px;
+    margin-left: 450px;
+
+}
+#botaoComprarTexto{
+    position: absolute;
+    font-family: roboto;
+    color: white;
+    text-decoration: none;
+    padding: 1em 0px 1px 70px
+}
+#iconeCarrinho{
+    position: absolute;
+    padding: 0.3em 0px 1px 15px;
+}
+.botao2{
+    width: 12.5%;
+    height: 7.5%;
+    border-radius: 50px;
+    position: absolute;
+    background: linear-gradient(to top left, #900AB1, #4A14E4);
+    margin-top: 470px;
+    margin-left: 740px;
+}
+#botaoAlugarTexto{
+    position: absolute;
+    font-family: Roboto;
+    color: white;
+    text-decoration: none;
+    padding: 1em 0px 1px 70px;
+}
+#iconeAlugar{
+    position: absolute;
+    padding: 0.3em 0px 1px 15px;
+}
+.background{
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    filter: brightness(25%)
+}
