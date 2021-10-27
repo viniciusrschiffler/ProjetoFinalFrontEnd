@@ -1,20 +1,14 @@
-var popUp = document.querySelector('.botao1');
-popUp.addEventListener("click", () => {
+var popUps = document.querySelectorAll('.botoes');
 
-    Swal.fire({
-        position: 'top-end',
-        title: 'Sucesso\n\nFilme adicionado ao carrinho',   
-        showConfirmButton: true,
-        timer: 3000
-    })
-})
-var popUpDois = document.querySelector('.botao2');
-popUpDois.addEventListener("click", () => {
+popUps.forEach(popUp =>{
+    popUp.addEventListener("click", () => {
 
-    Swal.fire({
-        position: 'top-end',
-        title: 'Sucesso\n\nFilme adicionado ao carrinho',   
-        showConfirmButton: true,
-        timer: 3000
+        Swal.fire({
+            icon: 'success',
+            position: 'top-end',
+            title: 'Filme adicionado ao carrinho',   
+            showConfirmButton: true,
+            timer: 3000,
+        })
     })
 })
