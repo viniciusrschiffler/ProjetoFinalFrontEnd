@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+html {
+  height: 100%;
+}
+@media screen and (max-width: 1480px) {
+}
+@media only screen and (min-width: 380px) {
+  .table table-striped {
+    width: 94%;
+  }
+  .table table-striped tbody td {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.table table-striped tr td:nth-child(1) {
+  width: 40%;
+}
+.table table-striped tr td:nth-child(2) {
+  width: 40%;
+}
+.table table-striped tr td:nth-child(3) {
+  width: 20%;
+}
+body {
+  background: linear-gradient(#0c061d 26.04%, #230871 57.81%, #440753 100%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+#comeco {
+  width: 80%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#titulo {
+  color: #dddddd;
+}
+
+#limp {
+  position: absolute;
+  margin-left: 100%;
+}
+#comeco h1 {
+  color: #dddddd;
+}
+#limp {
+  color: #d60000;
+  cursor: pointer;
+}
+
+#tabela-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  margin: auto;
+}
+#tabela-container table {
+  box-shadow: rgba(104, 46, 240, 0.4) 5px 5px,
+    rgba(146, 46, 240, 0.246) 10px 10px, rgba(114, 46, 240, 0.2) 15px 15px,
+    rgba(98, 46, 240, 0.1) 20px 20px, rgba(59, 46, 240, 0.05) 25px 25px;
+  background-color: rgb(172, 172, 172);
+  width: 80%;
+  color: #000000;
+}
+
+#butoes {
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20vh;
+  display: flex;
+}
+#butoes a {
+  max-width: 220px;
+  min-width: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #801c99;
+  height: 28%;
+  border-radius: 10px;
+  border: 10px;
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+}
+#butoes a:nth-child(1) {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 160px;
+}
+#butoes a:nth-child(2) {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 170px;
+  background-color: #462c94;
+  font-size: 98%;
+}
+#butoes a:hover {
+  opacity: 0.8;
+}
+.imagemmenos {
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  left: 78%;
+  bottom: 28px;
+}
+#primeiraparte {
+  background-color: rgb(189, 189, 189);
+}
+#dir {
+  position: absolute;
+  justify-content: center;
+  bottom: 1%;
+  margin-left: 82%;
+  color: #757575;
+}
