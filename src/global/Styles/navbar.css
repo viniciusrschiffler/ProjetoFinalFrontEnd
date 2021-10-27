@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+
+ul {list-style: none;}
+
+body {
+    background: rgb(12,6,29);
+    background: linear-gradient(90deg, rgba(12,6,29,1) 14%, rgba(35,8,113,1) 52%, rgba(68,7,83,1) 100%);
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+
+    background: #222222;
+
+    display: flex;
+}
+
+/* ------------ LOGO ------------- */
+
+#logo {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ------------ LINKS ------------- */
+
+#links {
+    width: 75%;
+    height: 100%;
+}
+
+#links > ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#links > ul > li {
+    height: 100%;
+
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-right: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#links ul li:hover {
+    color: #7E14A8;
+}
+
+/* ------------ GENEROS ------------- */
+
+#genero-container {
+    position: relative;
+}
+
+#genero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#genero-container > #genero > svg > path {
+    transition: 0.2s;
+}
+
+#genero-container:hover #genero > svg > path {
+    stroke: #7E14A8;
+}
+
+#genero svg {
+    width: 20px;
+}
+
+/* ------------ SUB ITEMS EM GERAL ------------- */
+
+.subItens {
+    display: none;
+    
+    position: absolute;
+    top: 80%;;
+
+    background: #222222;
+    z-index: 10;
+}
+
+.subItens ul li {
+    padding: 15px 20px;
+
+    border-bottom: 2px solid #999999;
+
+    color: #fff;
+    font-size: 0.8em;
+    transition: 0.2s;
+}
+
+.subItens ul li:hover {
+    border-color: #7E14A8;
+}
+
+.subItens ul li:nth-child(1) {
+    padding-top: 20%;
+}
+
+
+/* ------------ DROP DOWN GENERO ------------- */
+
+#genero-container:hover #genero-subItens{
+    display: block;
+}
+
+#li-mais {
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#li-mais > svg {
+    width: 20px;
+    transform: rotate(270deg);
+}
+
+#li-mais > svg > path {
+    transition: 0.2s;
+}
+
+#li-mais:hover > svg > path {
+    stroke: #7E14A8;
+}
+
+
+/* ------------ INPUT ------------- */
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+#input-container input {
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 8px;
+    margin-right: 5%;
+
+    outline: none;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#input-container > svg {
+    position: absolute;
+    width: 23px;
+    right: 0;
+    margin-right: 10px;
+}
+
+#input-container > svg > path {
+    stroke: #222;
+}
+
+
+
+/* ------------ FOTO PERFIL ------------- */
+
+#foto-perfil-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#foto-perfil-container:hover #profile-pic-subItens {
+    display: block;
+}
+
+#foto-perfil > img{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+#foto-perfil > svg {
+    width: 1em;
+}
+
+#foto-perfil:hover svg path {
+    stroke: #7E14A8;
+}
+
+#profile-pic-subItens {
+    position: absolute;
+}
+
+#profile-pic-subItens ul li:nth-child(3):hover {
+    color: #ee2d2d;
+    border-color: #ee2d2d;
+}
+
