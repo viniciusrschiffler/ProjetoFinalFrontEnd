@@ -29,6 +29,11 @@ nav {
     justify-content: center;
 }
 
+#logo img {
+    width: 250%;
+    height: 250%;
+}
+
 
 /* ------------ LINKS ------------- */
 
@@ -65,6 +70,15 @@ nav {
 
 #links ul li:hover {
     color: #7E14A8;
+}
+
+#links ul li:hover > a {
+    color: #7E14A8;
+}
+
+#links ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
 /* ------------ GENEROS ------------- */
@@ -115,6 +129,10 @@ nav {
 
 .subItens ul li:hover {
     border-color: #7E14A8;
+}
+
+.subItens ul li:hover a{
+    color: #7E14A8 !important;
 }
 
 .subItens ul li:nth-child(1) {
@@ -175,12 +193,18 @@ nav {
 #input-container > svg {
     position: absolute;
     width: 23px;
+    background: #fff;
+    border-radius: 50%;
     right: 0;
     margin-right: 10px;
 }
 
 #input-container > svg > path {
     stroke: #222;
+}
+
+#input-container > svg:hover > path {
+    stroke: #7E14A8;
 }
 
 
@@ -218,7 +242,37 @@ nav {
 }
 
 #profile-pic-subItens ul li:nth-child(3):hover {
-    color: #ee2d2d;
     border-color: #ee2d2d;
 }
 
+#profile-pic-subItens ul li:nth-child(3):hover a{
+    color: #ee2d2d !important;
+}
+
+@media screen and (max-width: 1000px) {
+    #logo {
+        width: 30%;
+    }
+
+    #logo img {
+        width: 200%;
+        height: 200%;
+    }
+
+    #links {
+        width: 70%;
+    } 
+
+    #links > ul > li {
+        font-size: 1rem;
+        margin-right: 6%;
+    }
+
+    #input-container input {
+
+        border-radius: 20px;
+        padding: 8px;
+        margin-right: 5%;
+        font-size: 0.9rem;
+    }
+}
