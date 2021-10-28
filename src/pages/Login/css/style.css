@@ -1,0 +1,36 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgb(12,6,29);
+  background: linear-gradient(135deg,rgba(12,6,29,1) 14%, rgba(35,8,113,1)52%,rgba(68,7,83,1) 100%);
+}
+
+.login {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+
+.login .login-box {
+  background-color: black;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.login .login-box label {
+  color: white;
+}
+
+.login .login-box .btn-login {
+  background: linear-gradient(273.41deg, #4A14E4 0%, #900AB1 100%);
+  color: white;
+}
