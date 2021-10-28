@@ -2,46 +2,52 @@
     margin: 0;
     padding: 0;
 }
-#capa-filme{
-    position: absolute;
+#capaFilme img{
+    position: static;
     border-radius: 5%;
-    width: 200px;
-    height: 300px;
+    height: 45vh;
+    width: 21%;
     object-fit: cover;
-    transform: translatex(75%) translateY(40%);
-    border: 2.5px solid #440753
+    border: 2.5px solid #440753;
+    margin-left: 6vw;
+    margin-top: 25vh;
 }
-.infoFilme{
+.container{
     position: absolute;
     color: white;
     font-family: 'Dancing Script', cursive;
     font-family: 'Roboto';
 }
 #tituloFilme{
-    transform: translateX(95%) translateY(400%);
-    font-size: 30px;
+    position: relative;
+    margin-left: 30vw;
+    margin-top: -50vh;
+    font-size: 2em;
 }
 #rating{
-    transform: translateX(95%) translateY(700%);
-    font-size: 20px;
+    margin-left: 36vw;
+    margin-top: 3vh;
+    font-size: 23px;
 }
 #sinopseTitulo{
-    transform: translateX(95%) translateY(800%);
-    font-size: 20px;
+    margin-left: 35vw;
+    margin-top: 3vh;
+    font-size: 23px;
 }
 #sinopseInfo{
-    position: absolute;
     font-size: 15px;
-    transform:translateX(100%) translateY(700%);
+    margin-left: 36vw;
+    margin-top: 3vh;
+    margin-right: 20vw;
 }
 .botao1{
-    width: 12.5%;
-    height: 7.5%;
+    width: 16vw;
+    height: 9vh;
     border-radius: 50px;
     position: absolute;
     background: linear-gradient(to top left, #900AB1, #4A14E4);
-    margin-top: 470px;
-    margin-left: 450px;
+    margin-top: 85vh;
+    margin-left: 35vw;
 
 }
 #botaoComprarTexto{
@@ -49,27 +55,29 @@
     font-family: roboto;
     color: white;
     text-decoration: none;
-    padding: 1em 0px 1px 70px
+    padding: 8% 1% 1px 45%;
+    font-size: 110%;
 }
 #iconeCarrinho{
     position: absolute;
-    padding: 0.3em 0px 1px 15px;
+    padding: 2% 10% 2% 10%;
 }
 .botao2{
-    width: 12.5%;
-    height: 7.5%;
+    width: 16vw;
+    height: 9vh;
     border-radius: 50px;
     position: absolute;
     background: linear-gradient(to top left, #900AB1, #4A14E4);
-    margin-top: 470px;
-    margin-left: 740px;
+    margin-top: 85vh;
+    margin-left: 55vw;
 }
 #botaoAlugarTexto{
     position: absolute;
     font-family: Roboto;
     color: white;
     text-decoration: none;
-    padding: 1em 0px 1px 70px;
+    padding: 8% 1% 1px 45%;
+    font-size: 110%;
 }
 #iconeAlugar{
     position: absolute;
@@ -80,10 +88,16 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    filter: brightness(25%)
+    width: 100vw;
+    height: 100vh;
+    filter: brightness(25%);
+    background-size: cover;
+    object-fit: cover;
 }
+.contentTexto{
+    margin-top: 10vh;
+}
+
 /*
 flex-box
 rem

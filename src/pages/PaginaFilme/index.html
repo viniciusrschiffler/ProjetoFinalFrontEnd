@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOME DO FILME AQUI</title>
+    <title></title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body  onload="mudarTitulo()">
     
-    <div>
+   
         <img class="background" src="../images/spider-man-banner.jpg" alt="">
-    </div>
-    <div class="infoFilme">
-        <img id="capa-filme" src="../images/Spider-man.jpg" alt="">
-            <p id="tituloFilme"><strong>Homem-Aranha: Sem volta pra casa</strong></p>
-            <p id="rating">Avaliação: 9.8</p>
-            <p id="sinopseTitulo">Sinopse</p>
-            <p id="sinopseInfo">O Homem-Aranha precisa lidar com as consequências da sua 
-                verdadeira identidade ter sido descoberta.</p>
+        <div class="container">
+            <div id="capaFilme">
+                <img src="../images/Spider-man.jpg" alt="">
+            <div class="contentTexto">
+                </div>
+                    <div>
+                    <p id="tituloFilme">Homem-Aranha: Sem volta pra casa</p>
+                </div>
+                <div id="rating">
+                    <p>Avaliação: 9.8</p>
+                </div>
+                <div id="sinopseTitulo">
+                    <p>Sinopse :</p>
+                </div>
+                <div id="sinopseInfo">
+                    <p>O Homem-Aranha precisa lidar com as consequências da sua 
+                        verdadeira identidade ter sido descoberta.</p>
+                </div>
+            </div>
     </div>
     <div class="botao1 botoes">
-        <img id="iconeCarrinho" src="../images/carrinho.png" alt="Comprar filme" width="30%"><a id="botaoComprarTexto" href="#">COMPRAR</a>
+        <img id="iconeCarrinho" src="../images/carrinho.png" alt="Comprar filme" width="30%"><a id="botaoComprarTexto" href="#">R$ 9,99</a>
     </div>
     <div class="botao2 botoes">
         <img id="iconeAlugar" src="../images/Alugar.png" alt="Alugar filme" width="30%"><a id="botaoAlugarTexto" href="#">ALUGAR</a>
