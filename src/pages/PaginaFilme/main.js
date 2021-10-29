@@ -12,35 +12,40 @@ async function requisicoes(){
         document.querySelector("#capaFilme > img").setAttribute("src", `https://www.themoviedb.org/t/p/w220_and_h330_face${dados.poster_path}`)
         document.querySelector("#background > img").setAttribute("src", `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${dados.backdrop_path}`)
         document.getElementById("botaoComprarTexto").innerHTML = ("R$ " + preco);
+       
+        function ComprarFilme(){
+            var comprarButton = document.getElementsByClassName("botao1")[0]
+            comprarButton.addEventListener('click', ()=>{
+                setFilme("COMPRA")
+            })
+
+        }
+        var carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
         
-        
+        function alugarFilme(){
+            
+            var alugarButton = document.getElementsByClassName("botao2")[0]
+            alugarButton.addEventListener('click', ()=>{
+                setFilme("ALUGUEL")
+            })
+        }
+        function setFilme(tipo, botao){
+                carrinho.push({
+                    id: dados.id,
+                    filme: dados.title,
+                    valor: preco,
+                    tipo: tipo
+                })
+                console.log("oi")
+                localStorage.setItem("carrinho", JSON.stringify(carrinho))
+        } 
+        alugarFilme()
+        ComprarFilme() 
     }
+    
 requisicoes();
 
-function ComprarFilme(){
 
-    var comprarButton = document.getElementById("#botaoComprarTexto")
-
-    function setFilme(){
-        comprarButton.addEventListener('click', ()=>{
-            localStorage.setItem('Nome', filme)
-            localStorage.setItem('Tipo', "COMPRAR")
-            localStorage.setItem('Preço', "R$" + preco)
-        })
-    }
-}
-function alugarFilme(){
-
-    var alugarButton = document.getElementById("#botaoAlugarTexto")
-
-    function setFilme(){
-        alugarButton.addEventListener('click', ()=>{
-            localStorage.setItem('Nome', filme)
-            localStorage.setItem('Tipo', "ALUGUEL")
-            localStorage.setItem('Preço', "R$" + preco)
-        })
-    }
-}
 
 var popUps = document.querySelectorAll('.botoes');
 
