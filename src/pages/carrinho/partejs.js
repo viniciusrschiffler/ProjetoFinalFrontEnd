@@ -48,12 +48,12 @@ function carregarTabela() {
     if (itemjson != "") {
         var item = JSON.parse(itemjson);
         for (var i = 0; i < item.length; i++) {
-            tableContent.innerHTML += ` <tr id-linha = "${item[i].id}">
-                    <th scope="row">${i + 1}</th>
+            tableContent.innerHTML += ` <tr>
+                    <td>${i + 1}</td>
                     <td>${item[i].filme}</td>
                     <td>${item[i].valor}</td>
                     <td>${item[i].tipo}</td>
-                    <td><img src="D:img/minus.svg" alt="excluir" class="imagemmenos" id-linha = "${item[i].id}"></td>
+                    <td><img src= "D:img/minus.svg" alt="excluir" class="imagemmenos" onclick="removerlinha(${item[i].id})"></td>
                   </tr> `
         };
     }
@@ -61,20 +61,11 @@ function carregarTabela() {
 function limpar() {
     localStorage.setItem('carrinho', "")
     tableContent.innerHTML = "";
+    criarbotao();
 }
 carregarTabela();
 criarbotao();
 
-var botoeslimp = document.querySelectorAll(".imagemmenos");
-botoeslimp.forEach(botaolimp => {
-    botaolimp.addEventListener('click', (evento) => {
-        evento.preventDefault();
-        console.log('teste');
-        var idlinha = botaolimp.getAttribute("id-linha")
-        removerlinha(idlinha);
-        criarbotao();
-    })
-})
 function removerlinha(id) {
     var itemjson = localStorage.getItem('carrinho');
     if (itemjson != "") {
@@ -87,17 +78,11 @@ function removerlinha(id) {
         })
         item.splice(indiceitem, 1);
         console.log(item);
-        tableContent.innerHTML = "";
-        for (var i = 0; i < item.length; i++) {
-            tableContent.innerHTML += ` <tr id-linha = "${item[i].id}">
-                    <th scope="row">${i + 1}</th>
-                    <td>${item[i].filme}</td>
-                    <td>${item[i].valor}</td>
-                    <td>${item[i].tipo}</td>
-                    <td><img src="D:img/minus.svg" alt="excluir" class="imagemmenos" id-linha = "${item[i].id}"></td>
-                  </tr> `
-        };
         localStorage.setItem('carrinho', JSON.stringify(item));
+        tableContent.innerHTML = "";
+        carregarTabela();
+        criarbotao();
+
     }
 }
 
