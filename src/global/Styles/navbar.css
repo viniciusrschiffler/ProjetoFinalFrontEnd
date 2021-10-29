@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+
+ul {list-style: none;}
+
+body {
+    background: rgb(12,6,29);
+    background: linear-gradient(90deg, rgba(12,6,29,1) 14%, rgba(35,8,113,1) 52%, rgba(68,7,83,1) 100%);
+}
+
+nav {
+    width: 100vw;
+    height: 10vh;
+
+    background: #222222;
+
+    display: flex;
+}
+
+/* ------------ LOGO ------------- */
+
+#logo {
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img {
+    width: 250%;
+    height: 250%;
+}
+
+
+/* ------------ LINKS ------------- */
+
+#links {
+    width: 75%;
+    height: 100%;
+}
+
+#links > ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#links > ul > li {
+    height: 100%;
+
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-right: 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#links ul li:hover {
+    color: #7E14A8;
+}
+
+#links ul li:hover > a {
+    color: #7E14A8;
+}
+
+#links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ------------ GENEROS ------------- */
+
+#genero-container {
+    position: relative;
+}
+
+#genero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#genero-container > #genero > svg > path {
+    transition: 0.2s;
+}
+
+#genero-container:hover #genero > svg > path {
+    stroke: #7E14A8;
+}
+
+#genero svg {
+    width: 20px;
+}
+
+/* ------------ SUB ITEMS EM GERAL ------------- */
+
+.subItens {
+    display: none;
+    
+    position: absolute;
+    top: 80%;;
+
+    background: #222222;
+    z-index: 10;
+}
+
+.subItens ul li {
+    padding: 15px 20px;
+
+    border-bottom: 2px solid #999999;
+
+    color: #fff;
+    font-size: 0.8em;
+    transition: 0.2s;
+}
+
+.subItens ul li:hover {
+    border-color: #7E14A8;
+}
+
+.subItens ul li:hover a{
+    color: #7E14A8 !important;
+}
+
+.subItens ul li:nth-child(1) {
+    padding-top: 20%;
+}
+
+
+/* ------------ DROP DOWN GENERO ------------- */
+
+#genero-container:hover #genero-subItens{
+    display: block;
+}
+
+#li-mais {
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#li-mais > svg {
+    width: 20px;
+    transform: rotate(270deg);
+}
+
+#li-mais > svg > path {
+    transition: 0.2s;
+}
+
+#li-mais:hover > svg > path {
+    stroke: #7E14A8;
+}
+
+
+/* ------------ INPUT ------------- */
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+#input-container input {
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 8px;
+    margin-right: 5%;
+
+    outline: none;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#input-container > svg {
+    position: absolute;
+    width: 23px;
+    background: #fff;
+    border-radius: 50%;
+    right: 10px;
+    /* margin-right: 10px; */
+}
+
+#input-container > svg > path {
+    stroke: #222;
+}
+
+/* #input-container > svg:hover > path {
+    stroke: #7E14A8;
+} */
+
+
+
+/* ------------ FOTO PERFIL ------------- */
+
+#foto-perfil-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#foto-perfil-container:hover #profile-pic-subItens {
+    display: block;
+}
+
+#foto-perfil > img{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+#foto-perfil > svg {
+    width: 1em;
+}
+
+#foto-perfil:hover svg path {
+    stroke: #7E14A8;
+}
+
+#profile-pic-subItens {
+    position: absolute;
+}
+
+#profile-pic-subItens ul li:nth-child(3):hover {
+    border-color: #ee2d2d;
+}
+
+#profile-pic-subItens ul li:nth-child(3):hover a{
+    color: #ee2d2d !important;
+}
+
+
+/* ------------ RESPONSIVIDADE ------------- */
+
+@media screen and (max-width: 1000px) {
+    #logo {
+        width: 30%;
+    }
+
+    #logo img {
+        width: 200%;
+        height: 200%;
+    }
+
+    #links {
+        width: 70%;
+    } 
+
+    #links > ul > li {
+        font-size: 1rem;
+    }
+
+    #input-container input {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    #logo img {
+        width: 150%;
+        height: 150%;
+    }
+
+    #links > ul > li {
+        font-size: 0.9rem;
+    }
+
+    #input-container input {
+        font-size: 0.7rem;
+    }
+
+    #input-container > svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/*  */
+
+@media screen and (max-width: 700px) {
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    nav {
+        width: 40vw;
+        min-height: 100vh;
+
+        flex-direction: column;
+    }
+    
+
+    #logo {
+        width: 100%;
+        height: 20%;
+    }
+
+    #links {
+        width: 100%;
+        height: 80%;
+    }
+
+    #links > ul {
+        flex-direction: column-reverse;
+    }
+
+    #links > ul > li {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    #links ul li:hover {
+        color: #fff;
+    }
+
+    #links ul li:hover > a {
+        color: #fff;
+    }
+
+    #foto-perfil-container {
+        width: 100%;
+        height: 80%;
+        position: unset;
+
+        flex-direction: column;
+    }
+    
+    #foto-perfil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #foto-perfil > img{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+    }
+
+    #foto-perfil > svg{
+        display: none;
+    }
+
+    #profile-pic-subItens {
+        position: unset;
+        display: flex;
+
+        width: 100%;
+        height: 20%;
+
+        margin-top: 50px;
+    }
+
+    #profile-pic-subItens ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    #profile-pic-subItens ul li {
+        padding-top: 5%;
+    }
+
+    #input-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 40%;
+
+        position: relative;
+    }
+    
+    #input-container input {
+        width: 75%;
+        height: 25%;
+
+        border-radius: 10px;
+        padding: 8px;
+    
+        font-size: 0.9rem;
+    }
+
+    #input-container::after {
+        content: 'Procurar';
+        position: absolute;
+
+        width: 65%;
+        height: 25%;
+
+        left: 15%;
+        top: 90%;
+
+        border-radius: 10px;
+        background: linear-gradient(90deg,rgba(35,8,113,1) 0%, rgba(68,7,83,1) 100%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #input-container > svg {
+        display: none;
+    }
+
+    
+    
+}
