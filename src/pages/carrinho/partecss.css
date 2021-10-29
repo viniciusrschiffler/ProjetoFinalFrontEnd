@@ -4,7 +4,7 @@ html {
 }
 @media screen and (max-width: 1480px) {
 }
-@media only screen and (min-width: 380px) {
+@media only screen and (min-width: 360px) {
   .table table-striped {
     width: 94%;
   }
@@ -108,10 +108,8 @@ body {
 }
 .imagemmenos {
   cursor: pointer;
-  position: relative;
   width: 20px;
-  left: 78%;
-  bottom: 28px;
+  margin-left: 10%;
 }
 #primeiraparte {
   background-color: rgb(189, 189, 189);
