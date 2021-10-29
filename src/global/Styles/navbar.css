@@ -195,17 +195,17 @@ nav {
     width: 23px;
     background: #fff;
     border-radius: 50%;
-    right: 0;
-    margin-right: 10px;
+    right: 10px;
+    /* margin-right: 10px; */
 }
 
 #input-container > svg > path {
     stroke: #222;
 }
 
-#input-container > svg:hover > path {
+/* #input-container > svg:hover > path {
     stroke: #7E14A8;
-}
+} */
 
 
 
@@ -249,6 +249,9 @@ nav {
     color: #ee2d2d !important;
 }
 
+
+/* ------------ RESPONSIVIDADE ------------- */
+
 @media screen and (max-width: 1000px) {
     #logo {
         width: 30%;
@@ -265,14 +268,169 @@ nav {
 
     #links > ul > li {
         font-size: 1rem;
-        margin-right: 6%;
     }
 
     #input-container input {
-
-        border-radius: 20px;
-        padding: 8px;
-        margin-right: 5%;
         font-size: 0.9rem;
     }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    #logo img {
+        width: 150%;
+        height: 150%;
+    }
+
+    #links > ul > li {
+        font-size: 0.9rem;
+    }
+
+    #input-container input {
+        font-size: 0.7rem;
+    }
+
+    #input-container > svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/*  */
+
+@media screen and (max-width: 700px) {
+    body {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    nav {
+        width: 40vw;
+        min-height: 100vh;
+
+        flex-direction: column;
+    }
+    
+
+    #logo {
+        width: 100%;
+        height: 20%;
+    }
+
+    #links {
+        width: 100%;
+        height: 80%;
+    }
+
+    #links > ul {
+        flex-direction: column-reverse;
+    }
+
+    #links > ul > li {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    #links ul li:hover {
+        color: #fff;
+    }
+
+    #links ul li:hover > a {
+        color: #fff;
+    }
+
+    #foto-perfil-container {
+        width: 100%;
+        height: 80%;
+        position: unset;
+
+        flex-direction: column;
+    }
+    
+    #foto-perfil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #foto-perfil > img{
+        width: 12rem;
+        height: 12rem;
+        border-radius: 50%;
+    }
+
+    #foto-perfil > svg{
+        display: none;
+    }
+
+    #profile-pic-subItens {
+        position: unset;
+        display: flex;
+
+        width: 100%;
+        height: 20%;
+
+        margin-top: 50px;
+    }
+
+    #profile-pic-subItens ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    #profile-pic-subItens ul li {
+        padding-top: 5%;
+    }
+
+    #input-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 40%;
+
+        position: relative;
+    }
+    
+    #input-container input {
+        width: 75%;
+        height: 25%;
+
+        border-radius: 10px;
+        padding: 8px;
+    
+        font-size: 0.9rem;
+    }
+
+    #input-container::after {
+        content: 'Procurar';
+        position: absolute;
+
+        width: 65%;
+        height: 25%;
+
+        left: 15%;
+        top: 90%;
+
+        border-radius: 10px;
+        background: linear-gradient(90deg,rgba(35,8,113,1) 0%, rgba(68,7,83,1) 100%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #input-container > svg {
+        display: none;
+    }
+
+    
+    
 }
