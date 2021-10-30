@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../global/Styles/navbar.css">
-    <title>NavBar</title>
 </head>
 
-<body>
+<body onload="mudarTitulo()">
+
     <nav>
         <div id="logo">
-            <img src="../../images/Logo.png" alt="Logo do site">
+            <img src="../../images/LogoNav.png" alt="Logo do site">
         </div>
 
         <div id="links">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="../home/index.html">Inicio</a></li>
                 <li id="genero-container">
                     <div id="genero">
                         Gêneros
@@ -55,9 +60,9 @@
                     </div>
                     <div id="profile-pic-subItens" class="subItens">
                         <ul>
-                            <li><a href="#">Perfil</a></li>
-                            <li><a href="#">Carrinho</a></li>
-                            <li><a id="sair" href="#" >Sair</a></li>
+                            <li><a href="../perfil/">Perfil</a></li>
+                            <li><a href="../carrinho/index.html">Carrinho</a></li>
+                            <li><a id="sair" href="../../../index.html">Sair</a></li>
                         </ul>
                     </div>
                 </li>
@@ -65,7 +70,37 @@
         </div>
     </nav>
 
+    <div id="background">
+        <img src="" alt="">
+    </div>
+    <div class="container">
+        <div id="capaFilme">
+            <img src="" alt="">
+            <div class="contentTexto">
+            </div>
+            <div>
+                <p id="tituloFilme"></p>
+            </div>
+            <div id="rating">
+                <p></p>
+            </div>
+            <div id="sinopseTitulo">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="botao1 botoes">
+        <img id="iconeCarrinho" src="../../images/carrinho.png" alt="Comprar filme" width="30%"><a
+            id="botaoComprarTexto" href="#"></a>
+    </div>
+    <div class="botao2 botoes">
+        <img id="iconeAlugar" src="../../images/Alugar.png" alt="Alugar filme" width="30%"><a id="botaoAlugarTexto"
+            href="#">ALUGAR</a>
+    </div>
+
     <script src="../../global/scripts/navbar.js"></script>
+    <script src="main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

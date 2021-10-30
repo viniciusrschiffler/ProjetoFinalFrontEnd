@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <title>FIFI FILMES</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta nome="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="./style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../global/Styles/navbar.css">
+  <style>
+    main {
+      min-width: 320px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg">
+
+    <nav>
+        <div id="logo">
+          <img src="../../images/LogoNav.png" alt="Logo do site">
+        </div>
+  
+        <div id="links">
+          <ul>
+            <li><a href="../home/">Inicio</a></li>
+            <li id="genero-container">
+              <div id="genero">
+                Gêneros
+  
+                <svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 12.75L17 21.25L25.5 12.75" stroke="white" stroke-width="5.41667" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+  
+              </div>
+              <div id="genero-subItens" class="subItens">
+                <ul></ul>
+              </div>
+            </li>
+  
+            <li id="input-container">
+              <input type="text" placeholder="Digite um filme...">
+              <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.5833 26.9167C21.8426 26.9167 26.9167 21.8426 26.9167 15.5833C26.9167 9.32411 21.8426 4.25 15.5833 4.25C9.32411 4.25 4.25 9.32411 4.25 15.5833C4.25 21.8426 9.32411 26.9167 15.5833 26.9167Z"
+                  stroke="white" stroke-width="4.33333" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M29.75 29.75L23.5875 23.5875" stroke="white" stroke-width="4.33333" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </li>
+  
+            <li id="foto-perfil-container">
+              <div id="foto-perfil">
+                <img src="../../images/fotoPerfil.png" alt="Imagem de perfil do github">
+  
+                <svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 12.75L17 21.25L25.5 12.75" stroke="white" stroke-width="5.41667" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div id="profile-pic-subItens" class="subItens">
+                <ul>
+                  <li><a href="../perfil/">Perfil</a></li>
+                  <li><a href="../carrinho/index.html">Carrinho</a></li>
+                  <li><a id="sair" href="../../../index.html">Sair</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+  <section class="perfil">
+    <div class="center">
+      <div class="retangulo">
+      </div>
+      <!---retangulo-->
+
+      <section class="tabela">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Filme</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Tipo</th>
+            </tr>
+          </thead>
+          <tbody id= "tableContent">
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <!--center-->
+    <div class="nomePessoa">
+      <h1>Olá,</h1>
+      <h1 id="nome">Nome Completo</h1>
+    </div>
+    <!--nomePessoa-->
+
+    <div class="bioPessoa">
+        <h2 id="bio"></h2>
+    </div>
+    <!--bioPessoa-->
+
+
+    <div class="foto" id="foto" style="border-radius: 100px;">
+     
+    </div>
+    <!--extras-->
+
+
+    <div class="background">
+    </div>
+    <!---background-->
+
+    <script src="../../global/scripts/navbar.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

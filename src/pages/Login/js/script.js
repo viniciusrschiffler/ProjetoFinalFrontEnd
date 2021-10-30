@@ -27,7 +27,7 @@ document.getElementById("botaoAcessar").onclick = function (event) {
       // Armazena o retorno da API no localStorage como um array, facilitando o consumo de qualquer informação do usuário em outras páginas.
       localStorage.setItem('usuarioFiFi', JSON.stringify(resultado.dados));
       
-      window.location.href = "/interna.html"; // colocar a URL da página após o login
+      window.location.href = "./src/pages/home"; // colocar a URL da página após o login
       return;
     };
   })

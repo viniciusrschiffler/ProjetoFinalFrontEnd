@@ -1,13 +1,12 @@
 /*==============================Requisição e uso da API==============================*/
-const TOKEN = '345411636508e2b74308228fcfc87973'
 
 async function requisicoes(){
-    var filme = 541;
-    const dados = await (await fetch(`https://api.themoviedb.org/3/movie/${filme}?api_key=${TOKEN}`)).json();
+    var filme = localStorage.getItem("paginaFilmeId");
+    const dados = await (await fetch(`https://api.themoviedb.org/3/movie/${filme}?api_key=${TOKEN}&language=${linguagem}`)).json();
     var preco = dados.budget * 0.000001 + 2;
     
         document.getElementById("tituloFilme").innerHTML = dados.title;
-        document.getElementById("rating").innerHTML = dados.vote_average;
+        document.getElementById("rating").innerHTML = `Avaliação: ${dados.vote_average}`;
         document.getElementById("sinopseTitulo").innerHTML = dados.overview;
         document.querySelector("#capaFilme > img").setAttribute("src", `https://www.themoviedb.org/t/p/w220_and_h330_face${dados.poster_path}`)
         document.querySelector("#background > img").setAttribute("src", `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${dados.backdrop_path}`)
@@ -20,6 +19,10 @@ async function requisicoes(){
             })
 
         }
+
+        if (localStorage.getItem('carrinho') == "") {
+            localStorage.removeItem('carrinho')
+        }
         var carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
         
         function alugarFilme(){
@@ -29,7 +32,12 @@ async function requisicoes(){
                 setFilme("ALUGUEL")
             })
         }
-        function setFilme(tipo, botao){
+        function setFilme(tipo){
+
+                if (tipo == 'ALUGUEL') {
+                    preco = preco / 2;
+                }  
+
                 carrinho.push({
                     id: dados.id,
                     filme: dados.title,

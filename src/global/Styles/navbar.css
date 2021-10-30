@@ -307,8 +307,10 @@ nav {
     nav {
         width: 40vw;
         min-height: 100vh;
+        position: absolute;
 
         flex-direction: column;
+        z-index: 10;
     }
     
 

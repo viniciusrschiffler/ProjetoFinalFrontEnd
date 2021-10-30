@@ -1,0 +1,83 @@
+.background{
+    background-color: gray;  
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    margin: 0px;;
+}
+.retangulo{
+    border-radius: 3% 3% 3% 3%;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 10500%;
+    background-color: #ffffff;
+    margin: 0%;
+    position:absolute;
+		left:15%;
+		top:730%;
+}
+.bg{
+    background-image: linear-gradient(120deg, #0C061D, #230871, #440753);
+}
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.2%;
+}
+
+section.perfil{
+    height: calc(100%-200px);
+    position: relative;
+}
+
+.tabela{
+    font-size: 130%;
+    position:absolute;
+		left:40%;
+		top:7500%;
+		margin-top:-5%;
+}
+
+.foto{
+    border-radius: 100%;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 4800%;
+    background-color: #E5E5E5;
+    margin: 0%;
+    position:absolute;
+		left:18%;
+		top:1500%;
+}
+.foto img{
+    border-radius: 50%;
+}
+
+
+.nomePessoa{
+    margin-top: 100%;
+    font-weight: bolder;
+    font-size: 20%;
+    font-weight: bolder;
+    position:absolute;
+		left:40%;
+		top:2300%;
+		margin-top:0%;
+}
+
+.bioPessoa{
+    font-size: 180%;
+    position:absolute;
+		left:40%;
+		top:4300%;
+		margin-top:0%;
+}

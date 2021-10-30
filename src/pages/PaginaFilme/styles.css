@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    overflow-x: hidden;
+}
+
 /*==================min wid 1022px==================*/
 @media screen and (min-width: 1022px) {
     

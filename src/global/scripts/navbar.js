@@ -8,15 +8,8 @@ localStorage.setItem('githubName', 'viniciusrschiffler') // apenas para teste
 
 const imagemDePerfil = document.querySelector('#foto-perfil > img');
 
-async function pegarFotoDePerfil(userName) {
-    let resposta = await (await fetch(`https://api.github.com/users/${userName}`)).json()
-
-    let fotoDePerfil = resposta.avatar_url;
-    imagemDePerfil.setAttribute('src', fotoDePerfil)
-}
-
-const githubName = localStorage.getItem('githubName');
-pegarFotoDePerfil(githubName)
+const dadosUsuario = JSON.parse(localStorage.getItem('usuarioFiFi'))
+imagemDePerfil.setAttribute('src', dadosUsuario.avatar_url)
 
 
 // ******************* BOTÃO DE SAIR ***********************
