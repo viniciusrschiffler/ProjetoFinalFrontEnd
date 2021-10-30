@@ -41,25 +41,19 @@ function retornarDadosGit() {
 
 
             document.getElementById("foto").appendChild(img)
-            
-
-        
-            
-            
-            
-            
-            
-
-
- 
         });
 }
 
 retornarDadosGit()
 
 
-localStorage.setItem('carrinho', 'Homem Aranha, nunca mais volta pra casa')
-
+const carrinhoTeste = [
+    {id: 610253, filme: "Halloween Kills: O Terror Continua", valor: 22, tipo: "COMPRA"},
+    {id: 580489, filme: "Venom: Tempo de Carnificina", valor: 56, tipo: "ALUGUEL"},
+    {id: 566525, filme: "Shang-Chi e a Lenda dos Dez Anéis", valor: 152, tipo: "COMPRA"},
+]
+var tableContent = document.getElementById("tableContent")
+localStorage.setItem("carrinho", JSON.stringify(carrinhoTeste))
 function carregarTabela() {
     var itemjson = localStorage.getItem('carrinho');
     if (itemjson != "") {
@@ -70,7 +64,6 @@ function carregarTabela() {
                     <td>${item[i].filme}</td>
                     <td>${item[i].valor}</td>
                     <td>${item[i].tipo}</td>
-                    <td><img src= "../../images/minus.svg" alt="excluir" class="imagemmenos" onclick="removerlinha(${item[i].id})"></td>
                   </tr> `
         };
     }
